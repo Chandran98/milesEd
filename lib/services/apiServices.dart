@@ -26,6 +26,8 @@ class Apiservices {
   }
 
   getTestimonalData() async {
+
+        print("  getTestimonalData");
     try {
       var url = AppURl.testimonialsurl;
 
@@ -39,6 +41,7 @@ class Apiservices {
         return TestimonialsModal.fromMap(jsonData);
       }
     } catch (e) {
+      print("object$e");
       return e.toString();
     }
   }
