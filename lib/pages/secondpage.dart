@@ -4,14 +4,14 @@ import 'package:milesed/bloc/bloc/dataBloc.dart';
 import 'package:milesed/bloc/event/dataEvent.dart';
 import 'package:milesed/bloc/state/dataState.dart';
 
-class SecondPage extends StatefulWidget {
-  const SecondPage({super.key});
+class CheckoutCourse extends StatefulWidget {
+  const CheckoutCourse({super.key});
 
   @override
-  State<SecondPage> createState() => _SecondPageState();
+  State<CheckoutCourse> createState() => _CheckoutCourseState();
 }
 
-class _SecondPageState extends State<SecondPage> {
+class _CheckoutCourseState extends State<CheckoutCourse> {
 
     @override
   void initState() {

@@ -9,7 +9,8 @@ abstract class DataState extends Equatable {
   List<Object> get props => [];
 }
 
-class DataInit extends DataState {}
+
+class HomeDataInit extends DataState {}
 
 class HomeDataloading extends DataState {}
 
@@ -27,6 +28,7 @@ class HomeDataError extends DataState {
 
 
 
+class TestimonialDataInit extends DataState {}
 
 class TestimonialDataloading extends DataState {}
 

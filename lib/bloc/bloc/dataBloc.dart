@@ -7,20 +7,34 @@ import 'package:milesed/services/apiServices.dart';
 
 class DataBloc extends Bloc<DataEvent, DataState> {
   final Apiservices serviceRepo = Apiservices();
-  DataBloc() : super(DataInit()) {
+  DataBloc() : super(HomeDataInit()) {
     on<GetHomeData>((event, emit) async {
       emit(HomeDataloading());
       try {
         final HomeDataModel data = await serviceRepo.getHomeData();
+                print("testimonial data loaded");
+
         emit(HomeDataloaded(data: data));
       } catch (e) {
         emit(HomeDataError(err: e.toString()));
       }
     });
+   
+  }
+}
+
+
+
+
+class TestimonialDataBloc extends Bloc<DataEvent, DataState> {
+  final Apiservices serviceRepo = Apiservices();
+  TestimonialDataBloc() : super(TestimonialDataInit()) {
+ 
     on<GetTestimonialData>((event, emit) async {
       emit(TestimonialDataloading());
       try {
         final TestimonialsModal data = await serviceRepo.getTestimonalData();
+        print("testimonial data loaded");
         emit(TestimonialDataloaded(data: data));
       } catch (e) {
         emit(TestimonialDataError(err: e.toString()));
@@ -28,6 +42,17 @@ class DataBloc extends Bloc<DataEvent, DataState> {
     });
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 // class DataBloc extends Bloc<DataEvent, DataState> {

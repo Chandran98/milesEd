@@ -5,7 +5,7 @@
 list(APPEND FLUTTER_PLUGIN_LIST
   app_links
   connectivity_plus
-  nb_utils
+  flutter_inappwebview_windows
   url_launcher_windows
 )
 
